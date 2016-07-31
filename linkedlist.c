@@ -1,5 +1,5 @@
 #include "linkedlist.h"
-Node* add_node(LinkedList* list,void* obj){
+Node* LinkedList_add_node(LinkedList* list,void* obj){
     Node* node = malloc(sizeof(node));
     node->obj = obj;
     if(list->last){
@@ -14,7 +14,7 @@ Node* add_node(LinkedList* list,void* obj){
     list->size++;
     return node;
 }
-void delete_node(LinkedList* list,Node* node){
+void LinkedList_delete_node(LinkedList* list,Node* node){
     if(node->prev)
         node->prev->next = node->next;
     else
@@ -24,7 +24,7 @@ void delete_node(LinkedList* list,Node* node){
     free(node);
     list->size--;
 }
-void destroy_linked_list(LinkedList* list){
+void LinkedList_destroy_linked_list(LinkedList* list){
     int i;
     Node* node1 = list->first;
     Node* node2;

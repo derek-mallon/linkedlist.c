@@ -11,7 +11,7 @@ typedef struct LinkedList{
     struct Node* last;
     size_t size;
 }LinkedList;
-Node* add_node(LinkedList* list,void* obj);
-void delete_node(LinkedList* list,Node* node);
-void destroy_linked_list(LinkedList* list);
+Node* LinkedList_add_node(LinkedList* list,void* obj);
+void LinkedList_delete_node(LinkedList* list,Node* node);
+void LinkedList_destroy(LinkedList* list);
 #endif
