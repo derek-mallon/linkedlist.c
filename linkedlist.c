@@ -21,15 +21,17 @@ void LinkedList_delete_node(LinkedList* list,Node* node){
         list->first = node->next;
     if(!node->next)
         list->last = node->prev;
+    free(node->obj);
     free(node);
     list->size--;
 }
-void LinkedList_destroy_linked_list(LinkedList* list){
+void LinkedList_destroy(LinkedList* list){
     int i;
     Node* node1 = list->first;
     Node* node2;
     for(i=0;i<list->size;i++){
         node2 = node1->next;
+        free(node1->obj);
         free(node1);
         node1 = node2;
     }
