@@ -6,5 +6,5 @@ install:
 	cp linkedlist.h /usr/local/include
 	rm linkedlist.o
 remove:
-	rm /usr/include/linkedlist.h
+	rm /usr/local/include/linkedlist.h
 	rm /usr/lib/liblinkedlist.dylib
